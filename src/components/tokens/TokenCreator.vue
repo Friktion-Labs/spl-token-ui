@@ -103,7 +103,7 @@ export default {
         );
         tokenLink.value = `https://explorer.solana.com/address/${createdTokenAddress.value}?cluster=${chosenCluster.value}`;
       } catch (err) {
-        errorMessage.value = SolanaErrorHandler.getErrorMessage(err);
+        errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       }
 
       creatingToken.value = false;

@@ -107,7 +107,7 @@ export default {
             );
         accountLink.value = `https://explorer.solana.com/address/${createdAccountAddress.value}?cluster=${chosenCluster.value}`;
       } catch (err) {
-        errorMessage.value = SolanaErrorHandler.getErrorMessage(err);
+        errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       }
 
       creatingAccount.value = false;

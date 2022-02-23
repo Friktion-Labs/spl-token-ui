@@ -103,7 +103,7 @@ export default defineComponent({
         addressThatReceivedAirdrop.value = addressStatic;
         accountLink.value = `https://explorer.solana.com/address/${addressThatReceivedAirdrop.value}?cluster=${chosenCluster.value}`;
       } catch (err) {
-        errorMessage.value = SolanaErrorHandler.getErrorMessage(err);
+        errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       }
       requestingAirdrop.value = false;
     };

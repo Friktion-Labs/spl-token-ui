@@ -133,7 +133,7 @@ export default {
         editedTokenAddress.value = tokenAddress.value;
         tokenLink.value = `https://explorer.solana.com/address/${tokenAddress.value}?cluster=${chosenCluster.value}`;
       } catch (err) {
-        errorMessage.value = SolanaErrorHandler.getErrorMessage(err);
+        errorMessage.value = SolanaErrorHandler.getErrorMessage(err as Error);
       }
 
       editingToken.value = false;
